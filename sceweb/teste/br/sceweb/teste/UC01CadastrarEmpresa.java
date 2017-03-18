@@ -38,10 +38,22 @@ public class UC01CadastrarEmpresa {
 		assertEquals(1, empresaDAO.adiciona(empresa));
 	}
 	
-	@Test
-	public void CT01UC01FB_Cadastrar_empresa_cnpj_vazio(){
-		
+	@Test(expected=IllegalArgumentException.class)
+	public void CT03UC01FA_Cadastrar_empresa_nome_empresa_vazio(){
+			empresa.setNomeEmpresa("");		
 	}
 	
+	@Test(expected=IllegalArgumentException.class)
+	public void CT04UC01FA_Cadastrar_empresa_nome_fantasia_vazio(){
+			empresa.setNomeFantasia("");		
+	}
+	@Test(expected=IllegalArgumentException.class)
+	public void CT05UC01FA_Cadastrar_empresa_telefone_vazio(){
+			empresa.setTelefone("");		
+	}
+	@Test(expected=IllegalArgumentException.class)
+	public void CT06UC01FA_Cadastrar_empresa_endereco_vazio(){
+			empresa.setEndereco("");		
+	}
 
 }
