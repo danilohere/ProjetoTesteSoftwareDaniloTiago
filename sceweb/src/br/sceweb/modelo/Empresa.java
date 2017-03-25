@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 
 public class Empresa {
 	public String cnpj;
-	public String nomeEmpresa;
+	public String nomeDaEmpresa;
 	public String nomeFantasia;
 	public String endereco;
 	public String telefone;
@@ -21,15 +21,15 @@ public class Empresa {
 		}
 	}
 
-	public String getNomeEmpresa() {
-		return nomeEmpresa;
+	public String getNomeDaEmpresa() {
+		return nomeDaEmpresa;
 	}
 
-	public void setNomeEmpresa(String nomeEmpresa) {
-		if(nomeEmpresa.equals("")){
+	public void setNomeDaEmpresa(String nomeDaEmpresa) {
+		if(nomeDaEmpresa.equals("")){
 			throw new IllegalArgumentException("Nome da empresa Inválido");
 		}else{
-			this.nomeEmpresa = nomeEmpresa;
+			this.nomeDaEmpresa = nomeDaEmpresa;
 		}
 	}
 

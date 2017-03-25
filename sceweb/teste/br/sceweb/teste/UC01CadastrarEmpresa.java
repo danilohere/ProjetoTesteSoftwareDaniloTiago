@@ -20,7 +20,7 @@ public class UC01CadastrarEmpresa {
 		empresaDAO = new EmpresaDAO();
 		empresa = new Empresa();
 
-		empresa.setNomeEmpresa("empresa x");
+		empresa.setNomeDaEmpresa("empresa x");
 		empresa.setCnpj("89424232000180");
 		empresa.setNomeFantasia("empresa x");
 		empresa.setEndereco("rua taquari");
@@ -40,7 +40,7 @@ public class UC01CadastrarEmpresa {
 	
 	@Test(expected=IllegalArgumentException.class)
 	public void CT03UC01FA_Cadastrar_empresa_nome_empresa_vazio(){
-			empresa.setNomeEmpresa("");		
+			empresa.setNomeDaEmpresa("");		
 	}
 	
 	@Test(expected=IllegalArgumentException.class)
@@ -54,6 +54,11 @@ public class UC01CadastrarEmpresa {
 	@Test(expected=IllegalArgumentException.class)
 	public void CT06UC01FA_Cadastrar_empresa_endereco_vazio(){
 			empresa.setEndereco("");		
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void CT07UC01FA_Cadastrar_empresa_cnpj_vazio(){
+			empresa.setCnpj("");		
 	}
 
 }
